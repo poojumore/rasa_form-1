@@ -82,4 +82,4 @@ class ActionHandleQuestion(Action):
             dispatcher.utter_message(text="That's a great question! I'll do my best to help.")
 
         # Resume the form after answering
-        return [UserUtteranceReverted()]  # Resuming the previous form state
+        return [UserUtteranceReverted()] 

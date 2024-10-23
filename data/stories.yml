@@ -7,7 +7,7 @@ stories:
   - active_loop: reservation_form
   - intent: ask_question
   - action: utter_answer_question
-  # - action: action_handle_question
+  - action: action_handle_question
   - active_loop: reservation_form
   - slot_was_set:
       - name: "John"
