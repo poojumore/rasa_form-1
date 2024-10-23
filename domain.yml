@@ -1,0 +1,90 @@
+version: "3.1"
+
+intents:
+  - make_reservation
+  - ask_question
+  - provide_name
+  - provide_phone_number
+  - provide_reservation_date
+  - provide_number_of_guests
+  - goodbye
+
+entities:
+  - name
+  - phone_number
+  - reservation_date
+  - number_of_guests
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: reservation_form
+            requested_slot: name
+
+  phone_number:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: reservation_form
+            requested_slot: phone_number
+
+  reservation_date:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: reservation_form
+            requested_slot: reservation_date
+
+  number_of_guests:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: reservation_form
+            requested_slot: number_of_guests
+
+responses:
+  utter_ask_name:
+    - text: "What's your name?"
+
+  utter_ask_phone_number:
+    - text: "Please provide your phone number."
+
+  utter_ask_reservation_date:
+    - text: "What date would you like to reserve? (YYYY-MM-DD)"
+
+  utter_ask_number_of_guests:
+    - text: "How many guests will there be?"
+
+  utter_reservation_confirmation:
+    - text: "Your reservation is confirmed! We look forward to serving you."
+
+  utter_answer_question:
+    - text: "Yes,Here’s the answer to your question!"
+
+  utter_resume_form:
+    - text: "Let's continue with your reservation."
+
+  utter_goodbye:
+    - text: "Byee"
+
+forms:
+  reservation_form:
+    required_slots:
+      - name
+      - phone_number
+      - reservation_date
+      - number_of_guests
+
+actions:
+  - validate_reservation_form
+  - utter_answer_question
+  - utter_reservation_confirmation
+  - utter_resume_form
+  - action_submit_reservation
+  # - action_handle_question

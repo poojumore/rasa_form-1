@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - rule: Say 'I am a vpsets' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+# - rule: Say 'I am a vpsets' anytime the user challenges
+#   steps:
+#   - intent: testing
+#   - action: utter_goodbye
+
+
+# - rule: Dynamic Response
+#   steps:
+#     - intent: greet
+#     - action: action_dynamic_response
+
+# - rule: Time Query
+#   steps:
+#     - intent: ask_time
+#     - action: action_dynamic_response
+
+# - rule: Name Query
+#   steps:
+#     - intent: ask_name
+#     - action: action_dynamic_response
+
+
+  

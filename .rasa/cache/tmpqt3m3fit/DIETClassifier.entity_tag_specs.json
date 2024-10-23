@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-name",
+      "2": "I-name",
+      "3": "L-name",
+      "4": "U-name",
+      "5": "B-number_of_guests",
+      "6": "I-number_of_guests",
+      "7": "L-number_of_guests",
+      "8": "U-number_of_guests",
+      "9": "B-phone_number",
+      "10": "I-phone_number",
+      "11": "L-phone_number",
+      "12": "U-phone_number",
+      "13": "B-reservation_date",
+      "14": "I-reservation_date",
+      "15": "L-reservation_date",
+      "16": "U-reservation_date",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-name": 1,
+      "I-name": 2,
+      "L-name": 3,
+      "U-name": 4,
+      "B-number_of_guests": 5,
+      "I-number_of_guests": 6,
+      "L-number_of_guests": 7,
+      "U-number_of_guests": 8,
+      "B-phone_number": 9,
+      "I-phone_number": 10,
+      "L-phone_number": 11,
+      "U-phone_number": 12,
+      "B-reservation_date": 13,
+      "I-reservation_date": 14,
+      "L-reservation_date": 15,
+      "U-reservation_date": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

@@ -1,0 +1,20 @@
+version: "3.1"
+stories:
+- story: restaurant reservation with interruption
+  steps:
+  - intent: make_reservation
+  - action: reservation_form
+  - active_loop: reservation_form
+  - intent: ask_question
+  - action: utter_answer_question
+  # - action: action_handle_question
+  - active_loop: reservation_form
+  - slot_was_set:
+      - name: "John"
+      - phone_number: "1234567890"
+      - reservation_date: "2023-12-25"
+      - number_of_guests: 4
+  - action: action_submit_reservation
+  - active_loop: null
+
+

@@ -1,0 +1,33 @@
+version: "3.1"
+nlu:
+- intent: make_reservation
+  examples: |
+    - I want to make a reservation
+    - I would like to book a table
+    - Can I reserve a spot for dinner?
+
+- intent: ask_question
+  examples: |
+    - Can you tell me about the restaurant's menu?
+    - What are your opening hours?
+    - How many guests can I bring?
+
+- intent: provide_name
+  examples: |
+    - My name is [John](name)
+    - I am [Emily](name)
+
+- intent: provide_phone_number
+  examples: |
+    - My phone number is [1234567890](phone_number)
+    - Call me on [9876543210](phone_number)
+
+- intent: provide_reservation_date
+  examples: |
+    - I want to reserve for [2023-12-25](reservation_date)
+    - The date I want is [2024-05-12](reservation_date)
+
+- intent: provide_number_of_guests
+  examples: |
+    - We are [4](number_of_guests) people
+    - I need a table for [2](number_of_guests)
